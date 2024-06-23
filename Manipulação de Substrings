@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class ManipulacaoDeSubstrings {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite uma string: ");
+        String entrada = scanner.nextLine();
+
+        if (entrada.length() > 0) {
+            String substring = entrada.substring(0, entrada.length() - 1);
+            System.out.println("Substring: " + substring);
+        } else {
+            System.out.println("String vazia");
+        }
+
+        scanner.close();
+    }
+}
