@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class AjusteDePrecos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double valorProduto;
+
+        while (true) {
+            System.out.print("Digite o valor do produto (0 para encerrar): ");
+            valorProduto = scanner.nextDouble();
+
+            if (valorProduto == 0) {
+                break;
+            }
+
+            double novoPreco = Math.round(valorProduto * 1.12 * 100.0) / 100.0; // Arredondar para duas casas decimais
+            System.out.println("Novo preço: R$ " + novoPreco);
+        }
+
+        scanner.close();
+    }
+}
