@@ -1,0 +1,19 @@
+import javax.swing.JOptionPane;
+
+public class CalculadoraITBI {
+    public static void main(String[] args) {
+        String valorTransacaoStr = JOptionPane.showInputDialog("Digite o valor de transação do imóvel:");
+        double valorTransacao = Double.parseDouble(valorTransacaoStr);
+
+        String valorVenalStr = JOptionPane.showInputDialog("Digite o valor venal do imóvel:");
+        double valorVenal = Double.parseDouble(valorVenalStr);
+
+        String porcentagemITBIStr = JOptionPane.showInputDialog("Digite a porcentagem do imposto ITBI:");
+        double porcentagemITBI = Double.parseDouble(porcentagemITBIStr);
+
+        double baseCalculo = Math.max(valorTransacao, valorVenal);
+        double valorImposto = (baseCalculo * porcentagemITBI) / 100;
+
+        JOptionPane.showMessageDialog(null, String.format("Valor do imposto ITBI: R$ %.2f", valorImposto));
+    }
+}
